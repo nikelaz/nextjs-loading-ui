@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap')
+@import grid
+
+body
+  font-family: 'Roboto', sans-serif
+  font-size: 16px
+  color: #fff
+  background-color: #111
+
+img
+  max-width: 100%
+
+h1, h2, h3, h4, h5, h6, p
+  margin-top: 0
+
+body
+  padding-top: 100px
+  padding-bottom: 100px
+
+// AspectRatio
+.AspectRatio
+  position: relative
+  aspect-ratio: 1/1.5
+  overflow: hidden
+
+.AspectRatio > *
+  position: absolute
+  inset: 0
+  object-fit: cover
+
+// SkeletonLine
+$base-color: #242424
+$shine-color: #333
+$animation-duration: 1.6s
+
+@mixin background-gradient
+  background-image: linear-gradient(90deg, $base-color 0px, $shine-color 100px, $base-color 200px) 
+  background-size: 600px
+
+@keyframes shine-lines
+  0%
+    background-position: -200px
+
+  100%
+    background-position: 400px
+
+.SkeletonLine
+  display: inline-block
+  background-color: rgba(255, 255, 255, 0.05)
+  height: 1em
+  width: 1em
+  border-radius: 10px
+  vertical-align: middle
+  @include background-gradient
+  animation: shine-lines $animation-duration infinite linear
+
+// Utilities
+.-mb3
+  margin-bottom: 30px
+
+.-br10
+  border-radius: 10px

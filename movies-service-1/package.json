@@ -1,0 +1,14 @@
+{
+  "name": "movies-service",
+  "version": "1.0.0",
+  "description": "A fake slow movies service used to demonstrate Loading UI of Next.js 13",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Nikola Lazarov",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
